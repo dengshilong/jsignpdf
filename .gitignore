@@ -10,6 +10,9 @@ nbproject/private
 Output
 build
 
+*.iml
+.idea
+
 #iText.jar
 #iText-rtf.jar
 #jsignpdf-itxt.jar
