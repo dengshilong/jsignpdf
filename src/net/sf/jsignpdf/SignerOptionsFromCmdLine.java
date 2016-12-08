@@ -130,6 +130,8 @@ public class SignerOptionsFromCmdLine extends BasicSignerOptions {
 			setKeyPasswd(line.getOptionValue(ARG_KEY_PWD));
 		if (line.hasOption(ARG_OUTPATH))
 			setOutPath(line.getOptionValue(ARG_OUTPATH));
+		if (line.hasOption(ARG_OUTFILE))
+			setOutFile(line.getOptionValue(ARG_OUTFILE));
 		if (line.hasOption(ARG_OPREFIX))
 			setOutPrefix(line.getOptionValue(ARG_OPREFIX));
 		if (line.hasOption(ARG_OSUFFIX))
@@ -304,6 +306,8 @@ public class SignerOptionsFromCmdLine extends BasicSignerOptions {
 
 		OPTS.addOption(OptionBuilder.withLongOpt(ARG_OUTPATH_LONG).withDescription(RES.get("hlp.outPath")).hasArg()
 				.withArgName("path").create(ARG_OUTPATH));
+		OPTS.addOption(OptionBuilder.withLongOpt(ARG_OUTFILE_LONG).withDescription(RES.get("hlp.outFile")).hasArg()
+				.withArgName("outfile").create(ARG_OUTFILE));
 		OPTS.addOption(OptionBuilder.withLongOpt(ARG_OPREFIX_LONG).withDescription(RES.get("hlp.outPrefix")).hasArg()
 				.withArgName("prefix").create(ARG_OPREFIX));
 		OPTS.addOption(OptionBuilder.withLongOpt(ARG_OSUFFIX_LONG).withDescription(RES.get("hlp.outSuffix")).hasArg()

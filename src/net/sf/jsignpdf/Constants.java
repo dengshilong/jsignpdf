@@ -264,6 +264,10 @@ public class Constants {
 	public static final String ARG_OUTPATH = "d";
 	public static final String ARG_OUTPATH_LONG = "out-directory";
 
+
+	public static final String ARG_OUTFILE = "o";
+	public static final String ARG_OUTFILE_LONG = "out-file";
+
 	public static final String ARG_OPREFIX = "op";
 	public static final String ARG_OPREFIX_LONG = "out-prefix";
 

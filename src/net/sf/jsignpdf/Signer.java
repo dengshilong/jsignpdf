@@ -238,7 +238,9 @@ public class Signer {
 				final StringBuilder tmpName = new StringBuilder(anOpts.getOutPath());
 				tmpName.append(anOpts.getOutPrefix());
 				tmpName.append(tmpNameBase).append(anOpts.getOutSuffix()).append(tmpSuffix);
-				anOpts.setOutFile(tmpName.toString());
+				String outFile = anOpts.getOutFile();
+				if (outFile == null)
+					anOpts.setOutFile(tmpName.toString());
 				if (tmpLogic.signFile()) {
 					successCount++;
 				} else {
