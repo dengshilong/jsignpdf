@@ -410,6 +410,7 @@ public class KeyStoreUtils {
 	 */
 	public static PrivateKeyInfo getPkInfo(BasicSignerOptions options) throws UnrecoverableKeyException,
 			KeyStoreException, NoSuchAlgorithmException {
+		LOGGER.info("ksType " + options.getKsType() + " ksFile " + options.getKsFile() + " ksPasswd " + options.getKsPasswd());
 		final KeyStore tmpKs = loadKeyStore(options.getKsType(), options.getKsFile(), options.getKsPasswd());
 
 		String tmpAlias = getKeyAliasInternal(options, tmpKs);

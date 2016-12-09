@@ -126,8 +126,10 @@ public class SignerOptionsFromCmdLine extends BasicSignerOptions {
 			setKeyAlias(line.getOptionValue(ARG_KEY_ALIAS));
 		if (line.hasOption(ARG_KEY_INDEX))
 			setKeyIndex(getInt(line.getParsedOptionValue(ARG_KEY_INDEX), getKeyIndex()));
-		if (line.hasOption(ARG_KEY_PWD))
+		if (line.hasOption(ARG_KEY_PWD)) {
 			setKeyPasswd(line.getOptionValue(ARG_KEY_PWD));
+			setKsPasswd(line.getOptionValue(ARG_KEY_PWD));
+		}
 		if (line.hasOption(ARG_OUTPATH))
 			setOutPath(line.getOptionValue(ARG_OUTPATH));
 		if (line.hasOption(ARG_OUTFILE))
